@@ -1,0 +1,22 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+}
+
+dependencies {
+    implementation Deps.androidx_core
+    implementation Deps.androidx_material
+    implementation Deps.androidx_compact
+
+    implementation Deps.retrofit
+    implementation Deps.retrofit_converse_gson
+    implementation Deps.retrofit_rxjava3
+    implementation Deps.okhttp
+
+    implementation Deps.rxandroid
+    implementation Deps.rxjava3
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.androidx_junit
+    androidTestImplementation Deps.androidx_espresso
+}

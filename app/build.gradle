@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    defaultConfig {
+        applicationId "com.amaro.githubproject"
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':feature:list')
+    implementation project(':libraries:core')
+    implementation project(':libraries:networking')
+
+    implementation Deps.androidx_core
+    implementation Deps.androidx_material
+    implementation Deps.androidx_compact
+
+    implementation Deps.koin
+    implementation Deps.navigation_fragment
+    implementation Deps.navigation_ui
+    implementation Deps.navigation_dynamic_feature
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.androidx_junit
+    androidTestImplementation Deps.androidx_espresso
+}

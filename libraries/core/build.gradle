@@ -1,0 +1,17 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+}
+
+dependencies {
+    implementation Deps.androidx_core
+    implementation Deps.androidx_compact
+    implementation Deps.androidx_material
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.androidx_junit
+    androidTestImplementation Deps.androidx_espresso
+
+    implementation Deps.rxandroid
+    implementation Deps.rxjava3
+}

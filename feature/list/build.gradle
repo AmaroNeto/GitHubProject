@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+dependencies {
+    implementation project(':libraries:core')
+    implementation project(':libraries:networking')
+
+    implementation Deps.navigation_fragment
+    implementation Deps.navigation_ui
+
+    implementation Deps.rxandroid
+    implementation Deps.rxjava3
+
+    implementation Deps.koin
+    implementation Deps.glide
+    kapt Deps.glide_annotation
+
+    testImplementation Deps.junit
+    testImplementation Deps.androidx_core_testing
+    androidTestImplementation Deps.androidx_junit
+    androidTestImplementation Deps.androidx_espresso
+    androidTestImplementation Deps.androidx_fragment_testing
+    testImplementation Deps.mockito
+    testImplementation Deps.mockito_inline
+    debugImplementation Deps.navigation_testing
+}
